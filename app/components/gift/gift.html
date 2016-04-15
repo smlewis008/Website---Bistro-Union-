@@ -1,0 +1,101 @@
+<div id="giftpage">
+    <div id="giftpageHolder">
+        <section id="giftWelc">
+            <div id="giftWelcHolder">
+                <div id="giftWelcText">
+                    <h1>Send a Gift</h1>      
+                </div>
+            </div>
+        </section>
+        <section id="gift">
+            <div id="giftHolder">
+                <div id="giftInfo">
+                    <form name="userForm" ng-submit="submitForm(userForm.$valid)"  class="giftForm"> <!-- form -->
+                        
+                    <!-- FIRSTNAME -->
+                    <div class="blocks">
+                        <input type="text" name="name" placeholder="name" class="userIns" ng-model="sender.firstname" >
+                        
+                    </div>
+                        
+                        
+<!--
+                        <div ng-show="bool" class="fade">
+  Show and hide me
+</div>
+<button ng-click="bool=!bool">Toggle</button>
+                        <div ng-app="myApp" ng-controller="personCtrl">
+                            <div ng-class="{on:onOff}" class="highlight">
+  Highlight this box
+</div>
+<button ng-click="onOff=!onOff">Toggle</button>
+                            <button ng-click="toggle()" class="fat">Show user</button>
+
+                            <p class="fat" ng-show="myVar">
+                            Email <input type=text ng-model="firstName"><br>
+                            </p>
+
+                            </div>
+-->
+                      
+                    <div class="blocks">
+                        <input type="checked" name="name" placeholder="name" class="userIns">
+                        <h1 ng-hide="checked">Want to be notified when the person has received your gift?</h1>
+                        <button type="text" class="btnNotify" ng-click="toggle()">Notify</button>
+                    </div>    
+                    <!-- EMAIL -->
+                    <div class="blocks" ng-show="">
+                        <input type="email" name="email" placeholder="Email" class="userIns" ng-model="sender.email">
+                    </div>
+                        
+                    <!-- GIFTTO -->    
+                    <!-- GIFTTO --> 
+                    <!-- GIFTTO -->     
+                    <!-- FIRSTNAME -->
+                    <div class="blocks">
+                        <input type="text" name="name" placeholder="Name" class="userIns" ng-model="recv.firstname" >
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div class="blocks">
+                        <input type="email" name="email" placeholder="Email" class="userIns" ng-model="recv.email">
+                    </div>
+                        
+                    <!-- ADDRESS -->
+                    <div class="blocks">
+                        <input type="text" name="address"  placeholder="address" class="userIns" ng-model="recv.address">
+                    </div>
+                    <div class="blocks">
+                        <input type="text" name="city"  placeholder="city" class="userIns" ng-model="recv.city">
+                    </div>
+                    <div class="blocks">
+                        <input type="text" name="address"  placeholder="address" class="userIns" ng-model="recv.state">
+                    </div>
+                    <div class="blocks">
+                        <input type="text" name="zip"  placeholder="zip" class="userIns" ng-model="recv.zip">
+                    </div>
+                    <!-- OPTIONS -->    
+                    <!-- OPTIONS -->  
+                    <!-- OPTIONS -->
+                    <!-- SUBMIT BUTTON -->    
+                     <div class="form-group">
+                        <button type="text" class="btnSend">Send Gift</button>
+                        <button type="submit" class="btnClear">Clear</button> 
+                    </div>   
+                    <!-- SUBMIT BUTTON -->
+                    
+
+                </form>
+                </div>
+            </div>
+        </section>
+        <section id="footer">
+            <div id="footHolder">
+                <div id="footText">
+                    2016. Copyright Bistro. All rights reserve.
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+   

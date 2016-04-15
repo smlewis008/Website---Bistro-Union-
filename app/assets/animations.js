@@ -1,0 +1,1 @@
+var Bodden = angular.module('Bodden');

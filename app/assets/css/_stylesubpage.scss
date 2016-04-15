@@ -1,0 +1,218 @@
+//320 size
+@media screen and (min-width: $mobile-large) {
+
+//pageOne
+#rightinfoPic, #rightinfoPicTwo{
+    width: 100%;
+    height: 300px;
+    background-image: url("../img/womendesktop.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#rightinfoPicTwo{
+    background-image: url("../img/startup.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;     
+}
+    
+#leftinfoWords{
+    width: 100%;
+    height: 300px;
+    margin-top: -20px;
+    background-color: $white;
+    color:$black;
+    padding: 15px 22px 0px 33px;
+    h1{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 2em;
+        font-weight: 700;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        animation-duration: 3s;
+        animation-name: slideup;
+    }
+    p{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1em;
+        line-height: 1.64em;
+        letter-spacing: .025em;
+        animation-duration: 3s;
+        animation-name: slideup;
+    }
+}     
+#leftinfoPic{
+    width: 100%;
+    height: 300px;
+    background-image: url("../img/working.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#rightinfoWords{
+    width: 100%;
+    height: 300px;
+    margin-top: -20px;
+    background-color: $white;
+    color:$black;
+    padding: 15px 22px 0px 33px;
+    h1{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 2em;
+        font-weight: 700;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        animation-duration: 3s;
+        animation-name: slideup;
+    }
+    p{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1em;
+        line-height: 1.64em;
+        letter-spacing: .025em;
+        animation-duration: 3s;
+        animation-name: slideup;
+    }
+}
+#blacksectionOne{
+    width: 100%;
+    height:auto;
+    background-color: $black;
+    margin-top: -20px;
+    padding: 45px 22px 10px 33px;
+    color: $white;
+}
+.blksectionOne{
+    h1{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 2em;
+        font-weight: 700;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        color: $white;
+        padding: 0px 0px 33px 0px;
+    }
+    p{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1em;
+        font-weight: 300;
+        line-height: 1.64em;
+        letter-spacing: .025em;
+        color: $white;
+    }        
+}   
+#blksectionTwoA{
+    width: 100%;
+    height:auto;
+    padding: 45px 22px 10px 33px;
+    color: $white;
+    h2{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1.7em;
+        font-weight: 700;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        color: $white;
+        padding: 0px 0px 33px 0px;
+    }
+    p{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1em;
+        font-weight: 300;
+        line-height: 1.64em;
+        letter-spacing: .025em;
+        color: $white;
+    }        
+}     
+#blksectionTwoB{
+    width: 100%;
+    height:auto;
+    padding: 45px 22px 10px 33px;
+    color: $white;
+    h2{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1.7em;
+        font-weight: 700;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        color: $white;
+        padding: 0px 0px 33px 0px;
+    }
+    p{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1em;
+        font-weight: 300;
+        line-height: 1.64em;
+        letter-spacing: .025em;
+        color: $white;
+    }        
+}
+//pageTwo
+#whiteSection{
+    width: 100%;
+    height:540px;
+    background-color: $white;
+    padding: 45px 22px 15px 33px;
+}
+.block{
+    h1{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1.7em;
+        font-weight: 700;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        color: $black;
+        padding: 30px 0px 33px 10px;
+    }
+    p{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1em;
+        font-weight: 300;
+        line-height: 1.64em;
+        letter-spacing: .025em;
+        color: $black;
+        animation-duration: 2s;
+        animation-name: slideup;
+    } 
+}    
+#nextSection{
+    width: 100%;
+    height:auto;
+    background-image: url("../img/street.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 40px 0px 53px 0px;
+    margin-top: -20px;
+    margin-bottom: -10px;
+}
+#bigGrid{
+    width: 300px;
+    height:auto;
+    padding: 4px 0px 13px 14px;
+    background-color: $black;
+    margin: 0 auto;
+    h1{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1.7em;
+        font-weight: 700;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        color: $white;
+        padding: 30px 0px 33px 10px;
+    }
+    p{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1em;
+        font-weight: 300;
+        line-height: 1.64em;
+        letter-spacing: .025em;
+        color: $white;
+    } 
+}
+}//end of media query 
