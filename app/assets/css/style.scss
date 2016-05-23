@@ -1,13 +1,15 @@
-//import files
+// Import files
+//@import 'tabletlarge.scss';
+@import 'keyframes.scss';
 
 //bizcolors
 $base-color: #373752;
 $accent-color: #E2785D;
-
+ 
 //colors
-$white: #ffffff;
-$black: #000000;
-$grey: #eee;
+$white: #fff;
+$black: #000;
+$hover-grey: #eee;
 //gradent
 
 //fonts
@@ -15,7 +17,6 @@ $pacifico: 'Pacifico', cursive;
 $source-sans: 'Source Sans Pro', sans-serif;
 
 //media queries
-$mobile-small: 319px;
 $mobile-large: 320px;
 $tablet-small: 480px;
 $tablet-large: 768px;
@@ -25,7 +26,7 @@ body {
   margin: 0;
   width:100%;
   height:100%;
-//  overflow:hidden;
+  overflow-x:hidden;
 //  background-color: #f4f4f4;
 }
 
@@ -35,11 +36,12 @@ a {
 /* header */
 
 .header {
-  background-color: transparent;
+  background-color: rgba(0,0,0,.1); 
   box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
   position: fixed;
   width: 100%;
   z-index: 3;
+  
 }
 
 .header ul {
@@ -64,8 +66,8 @@ a {
 
 .header li a:hover,
 .header .menu-btn:hover {
-  background-color: $accent-color;
-  color: $base-color;
+  background-color:  $base-color;
+  color: $white;
 }
 
 .header .logo {
@@ -140,14 +142,15 @@ a {
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
+
 /* wrapper*/
 #wrapper{
   position: absolute;
   background-color: $base-color;
   width: 100%;
-  height: 3500px;
-//  padding: 40px 0px 0px 0px;
+  height: auto;
 }
+
 /* pages*/
 #hompage,#aboutpage,#winepage,#giftpage,{
     width: 100%;
@@ -155,7 +158,6 @@ a {
     position: absolute;
     background-color: lightgoldenrodyellow;
     top: 0px;
-//    padding: 80px 15px 0px 15px;
     #hompageHolder,#aboutpageHolder,#winepageHolder,#giftpageHolder,{
         width: 100%;
         height: auto;
@@ -164,22 +166,30 @@ a {
     }
 }
 
+
+
 @media screen and (min-width: $mobile-large){
 
-/* Homepage*/
+    
+/*
+*
+* Home page 
+*
+************************/
 //welcome
 #welcome,#aboutWelc,#wineWelc,#giftWelc{
     width: 100%;
     height: 726px;
     background-image: url("../img/welcometwo.jpeg");
-    background-attachment: scroll;
-    background-position: 50% 50%;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    #welcomeHolder,#aboutWelcHolder,#wineWelcHolder,#giftWelcHolder{
+    background-position:center center;
+    background-attachment:fixed;
+//    animation: imageAnimation 8s linear infinite 3s; 
+#welcomeHolder,#aboutWelcHolder,#wineWelcHolder,#giftWelcHolder{
         width: 100%;
         height:auto;
         position: relative;
@@ -194,41 +204,47 @@ a {
 }
 #aboutWelc{
     background-image: url("../img/outfulltable.jpeg");
-    background-attachment: scroll;
-    background-position: 50% 50%;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;   
+    background-size: cover;
+    background-position:center center;
+    background-attachment:fixed;
 }
 #wineWelc{
     background-image: url("../img/handsgrape.jpeg");
-    background-attachment: scroll;
-    background-position: 50% 50%;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;   
+    background-size: cover;
+    background-position:center center;
+    background-attachment:fixed;
 }
 #giftWelc{
-    background-image: url("../img/peopleeating.jpg");
-    background-attachment: scroll;
-    background-position: 50% 50%;
+    background-image: url("../img/fulltableone.jpg");
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;   
+    background-size: cover;
+    background-position:center center;
+    background-attachment:fixed;
 }    
 #welcome h1, #aboutWelc h1, #wineWelc h1, #giftWelc h1{
     font-family: $source-sans;
     font-weight: 600;
-    font-size: 6em;
+    font-size: 3em;
     text-align: center;
     color:$white;  
     margin: 0 auto;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: typing 9s steps(17, end), /* # of steps = # of characters */
+    blink-caret 1s step-end infinite;
+    -moz-animation: typing 9s steps(17, end), /* # of steps = # of characters */
+    blink-caret 1s step-end infinite;
 }  
      
 //restMenu
@@ -249,7 +265,7 @@ a {
     width: 100%;
     height: 500px;
     position: relative;
-    background-color: $grey;
+    background-color: $hover-grey;
     .pm{
         width: 100%;
         height: auto;
@@ -299,53 +315,7 @@ a {
     height: 250px;
 } 
     
-// special    
-//#special{
-//    width: 100%;
-//    height: 726px;
-//    background-color: greenyellow;
-//    margin-top: -20px;
-//    #specialHolder{
-//        width: 100%;
-//        height:726px;
-//        position: relative;
-//        margin: 0 auto;
-//        background-color: aqua;
-//        #specPic{
-//           display:none;
-//        }
-//        #detailsPic{
-//            width: 100%;
-//            height: 450px;
-//            background-color:black;
-//            padding: 297px 0px 0px 0px;
-//            background-image: url("../img/burg.jpg");
-//            background-attachment: scroll;
-//            background-position: 50% 50%;
-//            background-repeat: no-repeat;
-//            -webkit-background-size: cover;
-//            -moz-background-size: cover;
-//            -o-background-size: cover;
-//            background-size: cover;
-//        } 
-//    }
-//}   
-//#detailsPic h1, #detailsPic p{
-//    font-family: $source-sans;
-//    font-weight: 600;
-//    font-size: 2.5em;
-//    text-align: center;
-//    color:$white;  
-//    margin: 0 auto;
-//} 
-//#detailsPic p{
-//    font-family: $source-sans;
-//    font-weight: 300;
-//    font-size: 1.5em;
-//}  
-//    
-
-//restMenu
+//reservation
 #reservation{
     width: 100%;
     height: 927px;
@@ -359,6 +329,10 @@ a {
 //        background-color: aqua;
     }
 }
+.kept{
+    width: 100%;;
+    overflow:hidden;
+}
 #reservTile{
     width: 100%;
     height: 300px;
@@ -369,7 +343,13 @@ a {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;    
+    background-size: cover;
+//    animation: imageAnimation 22s linear infinite 0s;
+    overflow:hidden;
+}
+.resimage{
+    width: 100%;
+    height:100%;
 }
 #form{
     width: 100%;
@@ -384,11 +364,9 @@ a {
      margin:0 auto;
 //     background-color: pink;
     #simpleHolder{
-        margin:0px 0px 0px 52px;
-//        padding: 0px 0px 0px 10px;
+        margin: 0px 0px 0px 33px;
         width:100%;
-//        background-color: aliceblue;
-         input{
+        input{
             background: rgba(255, 255, 255, 0.08) none repeat scroll 0 0;
             border: 1px solid #9babb3;
             border-radius: 2px;
@@ -400,17 +378,53 @@ a {
             margin: 10px 0px;
             color:$white;
             width:80%;
-            
-          }
-          input[type="submit"] {
+        }
+        input[type="text"], input[type="email"] {
+            color: $white;
+            font-weight: 600;
+            font-family: $source-sans;
+            letter-spacing: 2px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        input[type="reset"] {
+            background: $hover-grey;
+            color:$black;
+            font-family: $source-sans;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 1px solid $hover-grey;
+            box-shadow: inset 0 0 0 0 #31302B;
+            -webkit-transition: all ease 0.8s;
+            -moz-transition: all ease 0.8s;
+            transition: all ease 0.8s;
+        }
+        input[type="reset"]:hover{
+            font-family: $source-sans;
+            color: $white;
+            font-weight: 600;    
+            box-shadow: inset 0 0 0 100px #31302B;
+            animation: generalhover .8s linear infinite;
+	     }
+        input[type="submit"] {
+            font-family: $source-sans;
+            color: $white;
+            font-weight: 600;
+            font-family: $source-sans;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             background: $accent-color;
             border: 1px solid $accent-color;
-          }
-          input[type="reset"] {
-            background: $grey;
-            color:$black;
-            border: 1px solid $grey;
-          }
+         }
+        input[type="submit"]:hover{
+            font-family: $source-sans;
+            color: $white;
+            font-weight: 600;
+            background: #000;
+            animation: generalhover 1s linear;
+        }
     }
 } 
 #simple h1, #simple p{
@@ -430,7 +444,7 @@ a {
 //connect
 #connect{
     width: 100%;
-    height: 1100px;
+    height: 1142px;
     background-color: $white;
     margin-top: -20px;
     #connectHolder{
@@ -438,7 +452,7 @@ a {
         height:auto;
         position: relative;
         margin: 0 auto;
-//        background-color: aqua;
+        padding-top: 36px;
     }
 }
 #consocial{
@@ -447,6 +461,7 @@ a {
     position: relative;
     background-color: $white;
     border: 4px solid $black;
+    margin-bottom: 18px;
     #socialWrap{
         position:relative;
         height: auto;
@@ -464,6 +479,9 @@ a {
             height:100px;
 //            background-color: brown;
             border-top: 4px solid $black;
+            :hover{
+                animation: generalhoversocial 1s linear;
+            }
             #wrapbLeft{
                 width: 50%;
                 height:90px;
@@ -471,9 +489,13 @@ a {
 //                background-color:whitesmoke;
                 border-right: 4px solid $black;
                 padding: 2em 0em 0em 4em;
+                :hover{
+                    animation: generalhoversocial 1s linear;
+                }
                 #wrapbLeft img{
 //                    marign: 10px 0px 0px 0px;
                 }
+                
             }
             #wrapbRight{
                 width: 50%;
@@ -518,8 +540,11 @@ a {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover; 
-    #blocksText{
+    background-size: cover;
+    margin-bottom: 18px;
+    overflow:hidden;
+    transition:all 0.3s ease;
+   #blocksText{
         position:relative;
         top:285px;
         height: auto;
@@ -530,6 +555,9 @@ a {
     }
     
 }
+#conTalk:hover{
+    box-shadow: inset 0 0 0 12px $accent-color;
+}    
 #blocksText h1,#blocksText h2{
     font-family: $source-sans;
     font-weight: 600;
@@ -566,9 +594,13 @@ a {
         #conBottom{
             width: 100%;
             height:100px;
-            background-color: $grey;
+            background-color: $hover-grey;
             border-top: 4px solid $black;
             padding: 23px 0px 0px 0px;
+            transition:all 2s ease;
+        }
+        #conBottom:hover{
+           animation: generalhoversocial 1s linear;
         }
     }
     #conTop h1,#conTop h2{
@@ -632,35 +664,36 @@ a {
     margin: 0 auto;
 }   
     
-/* Aboutpage*/
+
+    
+    
+    
+/*
+*
+* About page 
+*
+************************/    
 #letter{
     width: 100%;
-    height: 780px;
+    height: 584px;
     background-color: powderblue;
     margin-top: -20px;
     #letterHolder{
-        height: 780px;
+        height: 600px;
         background-color: $white;
         #notePic{
-            width: 100%;
-            height: 400px;
-            background-image: url("../img/banana.jpg");
-            background-attachment: scroll;
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;   
+            display:none;
         }
         #noteWritten{
             width: 100%;
-            height: 400px;
+            height: 563px;
             margin-top: -20px;
             #writtenText{
-                height: 400px;
-                background-color: $grey;
-                padding: 20px 12px 0px 17px;
+                height: 563px;
+                width: 100%;
+                background-color: $hover-grey;
+                padding: 50px 12px 0px 17px;
+                word-wrap: break-word; 
             }
         }
     }
@@ -670,10 +703,11 @@ a {
     font-weight: 200;
     font-size: 2em;
     letter-spacing: 3px;
-    line-height: 4px;
+    line-height: 44px;
     text-align: center;
     color:$black;  
     margin: 0 auto;
+    
 }
 #writtenText h2{
     font-family: $pacifico;
@@ -714,41 +748,67 @@ a {
                 background-color: yellow;    
             }  
         }
-        #glut{
+        #carlgut{
+            width:100%;
+            height: 400px;
+            float:left;
+            border: 1 solid #eee;
+            background-color: $base-color;
+            #justHolder{
+                width:100%;
+                height: 400px;
+                margin: 0 auto;
+                background-color: $base-color;
+                padding: 69px 13px 0px 20px;
+            }  
+        }
+        #logosMain{
             height: 400px;
             border: 1 solid #eee;
-        }
-        .ione, .itwo{
-            width:100px;
+            clear: both;
+            #logA, #logB, #logC{
+                width:100%;
+                height:150px;
+                background-color: $base-color;
+                padding: 10px 0px 0px 26%;
+                img{
+                    width:190px;
+                    margin: 0 auto;
+                    
+                }
+            }
         }
         
     }
 }
-#blocHolder h1, #blocHolder h2, #blocHolder h3{
-    font-family: $source-sans;
-    font-weight: 200;
-    font-size: 2em;
-    letter-spacing: 3px;
-    line-height: 4px;
-    text-align: center;
-    color:$black;  
-    margin: 0 auto;
-}
-#blocHolder h2{
+   
+#justHolder h2{
     font-family: $pacifico;
     font-weight: 200;
     font-size: .9em;
+    letter-spacing: 3px;
+    line-height: 44px;
+    text-align: center;
+    color:$white;  
+    margin: 0 auto;
+    
 }
-#blocHolder p{
+
+#justHolder p{
     font-family: $source-sans;
     font-weight: 300;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: center;
-    color:$black;  
+    color:$white;  
     margin: 0 auto;
-}   
+}    
     
-/* winepage*/
+    
+/*
+*
+* Wine page 
+*
+************************/
 #grape{
     width: 100%;
     height: 653px;
@@ -758,6 +818,8 @@ a {
         width: 100%;
         height: 653px;
         background-color: $white;
+//        display: -webkit-flex; /* Safari */
+//        display: flex;
         #graPic{
             width: 100%;
             height: 300px;
@@ -768,13 +830,15 @@ a {
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
-            background-size: cover; 
+            background-size: cover;
+//            order:1;
         }
         #graText{
             height: 300px;
-            background-color: $grey;
+            background-color: $hover-grey;
             margin: 25px 5px 10px 5px;
             padding: 15px 5px 10px 5px;
+//            order:2;
             #gratHolder{
                 height: auto;
             }
@@ -783,7 +847,7 @@ a {
 }
 #gratHolder h1, #gratHolder h2, #gratHolder p {
     font-family: $source-sans;
-    font-weight: 200;
+    font-weight: 600;
     font-size: 2em;
     letter-spacing: 3px;
     line-height: 34px;
@@ -798,6 +862,7 @@ a {
 }
 #gratHolder p {
     font-size: .9em;
+    font-weight: 200;
     letter-spacing: 3px;
     line-height: 20px;
 }    
@@ -811,8 +876,8 @@ a {
         width: 100%;
         height: 610px;
         background-color: $white;
+//        display: -webkit-flex; /* Safari */
 //        display: flex;
-//        flex-flow: row wrap;
         #carText{
             height: 300px;
             background-color: $white;
@@ -842,7 +907,7 @@ a {
 }    
 #cartextHolder h1, #cartextHolder h2, #cartextHolder p {
     font-family: $source-sans;
-    font-weight: 200;
+    font-weight: 600;
     font-size: 2em;
     letter-spacing: 3px;
     line-height: 34px;
@@ -857,13 +922,19 @@ a {
 }
 #cartextHolder p {
     font-size: .9em;
+    font-weight: 200;
     letter-spacing: 3px;
     line-height: 20px;
 }  
     
     
     
-/* giftpage*/
+    
+/*
+*
+* Gift page 
+*
+************************/
 #gift{
     width: 100%;
     height: 810px;
@@ -872,12 +943,12 @@ a {
     #giftHolder{
         width: 100%;
         height: 810px;
-        background-color: $white;
+        background-color: $hover-grey;
         #giftInfo{
             width: 80%;
             margin: 0 auto;
-            height:auto;
-            background-color: lightcoral;
+            height: 700px;
+            background-color: $white;
             padding: 35px 0px;
         }
         
@@ -886,7 +957,7 @@ a {
 form{
     width: 90%;
     margin: 0 auto;
-    background-color: aqua;
+//    background-color: aqua;
 }
 .blocks{
     display: block;
@@ -917,7 +988,7 @@ form{
 input {
     padding: 15px;
     width: 100%;
-    border: 4px solid $black;
+    border: 4px solid $base-color;
     border-radius: 0px;
     background: transparent;
     font-size: 1.3em;
@@ -927,47 +998,48 @@ input {
     opacity: 1;
 }
 input:hover {
-    border-bottom: 5px solid $black;
+    border-bottom: 5px solid $base-color;
     border-radius: 0px;
     border-top: none;
     border-left: none;
     border-right: none;
 }
-input::-webkit-input-placeholder {
-    color: #000;
-    text-transform: uppercase;
+select{
+    width: 100%;
+    background-color: $base-color;
+    color: $white;
+    font-family: $source-sans;
+    font-weight: 600;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    height: 44px;
+    option{
+        color: $white;
+        font-family: $source-sans;
+        font-weight: 600;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+    }
+} 
+select:focus {
+    outline: none;
+    color: $white;
+} 
+
+#pick{
+    color: $white;
+    font-family: $source-sans;
+    font-weight: 600;
+    font-size: 1.1em;
+    letter-spacing: 1px;
 }
-input::-moz-placeholder {
-    color: #000;
-    text-transform: uppercase;
-}
-input:-moz-placeholder {   /* Older versions of Firefox */
-    color: #000;
-    text-transform: uppercase;
-}
-input:-ms-input-placeholder { 
-    color: #000;
-    text-transform: uppercase;
-}
-[placeholder]:focus::-webkit-input-placeholder {
-  transition: opacity 0.5s 0.5s ease; 
-  opacity: 0;
-}
-[placeholder]:focus::-moz-input-placeholder {
-  transition: opacity 0.5s 0.5s ease; 
-  opacity: 0;
-}
-[placeholder]:focus::-ms-input-placeholder {
-  transition: opacity 0.5s 0.5s ease; 
-  opacity: 0;
-}     
-textarea:focus {
-  background: grey;
-}    
 .btnNotify, .btnSend, .btnClear{
     width:30%;
     height: 38px;
-    background-color: $black;
+    background-color: $base-color;
     color: $white;
     border: 0px;
     letter-spacing: 2px;
@@ -975,20 +1047,21 @@ textarea:focus {
 }
 .btnSend{
     float: left;
+    :hover{
+        animation: generalhoversocial 1s linear;
+    }
 }
 .btnClear{
     float: right;
+    :hover{
+        animation: generalhoversocial 1s linear;
+    }
 }    
 .btnNotify:hover, .btnSend:hover, .btnClear:hover{
-    background-color: $white;
-    color: $black;
-    border: 1px solid $black;
+    animation: generalhoversocial 1s linear;
+
 }    
 
-.ng-hide-add, .ng-hide-remove {
-    /* ensure visibility during the transition */
-    display: block !important; /* yes, important */
-}    
 
 #fa{
         height:50px;
@@ -1068,15 +1141,9 @@ textarea:focus {
 
 
 
-
-
-
-
-
-
 @media screen and (min-width: $tablet-large){
 #wrapper{
-    height: 2314px;
+    height: auto;
 }   
 .header li {
     float: left;
@@ -1092,9 +1159,20 @@ textarea:focus {
 .header .menu-icon {
     display: none;
 }
+    
+    
+    
+/*
+*
+* Home page 
+*
+************************/
+#welcome h1, #aboutWelc h1, #wineWelc h1, #giftWelc h1{
+    font-size: 5em;
+}  
 //restMenu    
 #restMenu{
-    height: 650px;
+    height: 754px;
     margin-top: 0px;
     #restHolder{
         height: 650px;
@@ -1105,9 +1183,7 @@ textarea:focus {
 #foodMenu{
     float:left;
     width:45%;
-    height: 526px;
-//    -webkit-animation: fmenumove 3s; 
-//    animation:  fmenumove 3s;
+    height: 650px;
 }
     
 #foodBig{
@@ -1115,34 +1191,24 @@ textarea:focus {
     width:25%;
     height: auto;
     margin: 40px 5px 0px 10px;
-//    -webkit-animation: fbmove 4s; 
-//    animation:  fbmove 4s;
-    
 }
 #foodSmall{
     float:left;
     width:25%;
     height: auto;
     margin: 120px 5px 0px 4px;
-//    -webkit-animation: fadeIn 7s; 
-//    animation:  fadeIn 7s;
-}
     
-/* make keyframes that tell the start state and the end state of our object */
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+}
 
+    
 .fade-in {
   opacity:0;  /* make things invisible upon start */
   -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
   -moz-animation:fadeIn ease-in 1;
   animation:fadeIn ease-in 1;
-
   -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
   -moz-animation-fill-mode:forwards;
   animation-fill-mode:forwards;
-
   -webkit-animation-duration:1s;
   -moz-animation-duration:1s;
   animation-duration:1s;
@@ -1165,45 +1231,7 @@ textarea:focus {
   -moz-animation-delay: 1.6s;
   animation-delay: 1.6s;
 }    
-   
-//special
-//#special{
-//    width: 100%;
-//    height:726px;
-//    #specialHolder{
-//        width: 100%;
-//        height:726px;
-//        background-color: red;
-//        #specPic{
-//           width: 50%;
-//           height: 450px;
-//           background-color:$base-color;
-////           float:left;
-//           display: block;
-//        }
-//        #detailsPic{
-//            width: 41%;
-//            height: 450px;
-//            background-color:antiquewhite;
-//            float:left;
-//            padding: 297px 0px 0px 0px;
-//            clear:both;
-//        } 
-//    }
-//}
-//#specPic h1, #specPic p{
-//    font-family: $source-sans;
-//    font-weight: 600;
-//    font-size: 2.5em;
-//    text-align: center;
-//    color:$white;  
-//    margin: 0 auto;
-//} 
-//#specPic p{
-//    font-family: $source-sans;
-//    font-weight: 300;
-//    font-size: 1.5em;
-//}
+
 //restMenu
 #reservation{
     height: 640px;
@@ -1229,12 +1257,8 @@ textarea:focus {
     position: absolute;
     background-repeat: repeat-x;
 
-	animation: animatedBackground 40s linear infinite;
 }
-@keyframes animatedBackground {
-	from { background-position: 0 0; }
-	to { background-position: 100% 0; }
-}    
+  
 #form{
     width: 50%;
     height: 640px;
@@ -1250,21 +1274,321 @@ textarea:focus {
     height: 526px;
     margin-top: 0px;
 }
-#consocial, #conTalk, #conEvent{
+#conTalk, #conEvent{
     float:left;
-    width:32%;
+    width:30%;
     height: 282px;
-    margin: 0px 7px;
+    margin: 0px 1%;
 }
-#conWrap, #socialWrap{
+#conEvent #conWrap #conBottom {
+    width: 100%;
+    height: 65px;
+    background-color: #eee;
+    border-top: 4px solid #000;
+    padding: 9px 0px 0px 0px;
+    transition: all 2s ease;
+}
+#conWrap{
     padding: 0px 0px 10px 0px;   
 }
 #conTalk #blocksText {
     position: relative;
     top: 215px;
+}
+//#wrapBottom {
+//    height: 61px;
+//    #wrapbLeft,#wrapbRight {
+//        height: 70px;
+//        padding: 2em 0em 0em 1.2em;
+//    } 
+//}    
+#consocial{
+    float:left;
+    width:30%;
+    height: 282px;
+    margin: 0px 2%;
+    #socialWrap{
+        padding: 60px 0px 10px 0px;  
+        #wrapTop{
+            line-height: .5em;
+            margin: 0px 0px 13px 0px;
+        }
+        #wrapBottom{
+            height: 81px;
+            #wrapbLeft{
+                height: 70px;
+                padding: 2em 0em 0em 1.5em;
+                float: left;
+                width: 50%;
+            }
+            #wrapbRight{
+                height: 70px;
+                padding: 2em 0em 0em 2.3em;
+                float: right;
+                width: 50%;
+            }
+        }
+    }
+} 
+
+#conEvent{
+    #conWrap{
+        #conTop {
+            width: 100%;
+            margin: 0px 0px 2px 0px;
+        }    
+    } 
+} 
+    
+    
+/*
+*
+* About page 
+*
+************************/    
+#letter{
+    width: 100%;
+    height: 650px;
+    background-color: powderblue;
+    margin-top: -20px;
+    #letterHolder{
+        height: 650px;
+        background-color: $white;
+        padding: 15px 15px;
+        #notePic{
+            display:block;
+            width: 50%;
+            height: 615px;
+            margin-top: 0px;
+            float: left;
+            padding: 0px 10px;
+            #tinyText{
+                background-color: $base-color;
+                height: 273px;
+                width: 48%;
+                float: left;
+                margin: 0px 1px 19px 0px;
+                padding: 44px 0px;
+               
+            }
+            #tinyPic{
+                background-color: $base-color;
+                height: 273px;
+                width: 48%;
+                float:right;
+                margin: 0px 1px 19px 0px;
+            }
+            #BottinyPic{
+                background-color: $base-color;
+                height: 273px;
+                width: 48%;
+                float:left;
+                margin: 0px 0px 0px 1px;
+            }
+            #BottinyText{
+                background-color: $base-color;
+                height: 273px;
+                width: 48%;
+                float:right;
+                margin: 0px 0px 0px 1px;
+                padding: 44px 0px;
+                
+            }
+            .apicture{
+                width:100%;
+                height:273px;
+            }
+        }
+        #noteWritten{
+            width: 50%;
+            height: 615px;
+            margin-top: 0px;
+            float: right;
+            #writtenText{
+                height: 565px;
+//                width: 100%;
+//                background-color: $hover-grey;
+                padding: 50px 12px 0px 17px;
+            }
+        }
+    }
+}
+#tinyText h1, #tinyText h2, #tinyText h3{
+    font-family: $source-sans;
+    font-weight: 600;
+    font-size: 1.7em;
+    letter-spacing: 3px;
+    line-height: 33px;
+    text-align: center;
+    color:$white;  
+    margin: 0 auto;
+    
+}
+#tinyText h2{
+    font-family: $pacifico;
+    font-weight: 200;
+    font-size: .9em;
+}
+#tinyText h3{
+    font-weight: 200;
+    font-size: .9em;   
+}
+#tinyText p{
+    font-family: $source-sans;
+    font-weight: 300;
+    font-size: .9em;
+    text-align: center;
+    color:$white;  
+    margin: 0 auto;
+}
+#BottinyText h1, #BottinyText h2, #BottinyText h3{
+    font-family: $source-sans;
+    font-weight: 600;
+    font-size: 1.7em;
+    letter-spacing: 3px;
+    line-height: 33px;
+    text-align: center;
+    color:$white;  
+    margin: 0 auto;
+    
+}
+#BottinyText h2{
+    font-family: $pacifico;
+    font-weight: 200;
+    font-size: .9em;
+}
+#BottinyText h3{
+    font-weight: 200;
+    font-size: .9em;   
+}
+#BottinyText p{
+    font-family: $source-sans;
+    font-weight: 300;
+    font-size: .9em;
+    text-align: center;
+    color:$white;  
+    margin: 0 auto;
+} 
+#writtenText h1, #writtenText h2, #writtenText h3{
+    font-family: $source-sans;
+    font-weight: 200;
+    font-size: 2em;
+    letter-spacing: 3px;
+    line-height: 44px;
+    text-align: center;
+    color:$black;  
+    margin: 0 auto;
+    
+}
+#writtenText h2{
+    font-family: $pacifico;
+    font-weight: 200;
+    font-size: .9em;
+}
+#writtenText h3{
+    font-weight: 200;
+    font-size: .9em;   
+}
+#writtenText p{
+    font-family: $source-sans;
+    font-weight: 300;
+    font-size: 1.5em;
+    text-align: center;
+    color:$black;  
+    margin: 0 auto;
 }    
     
-/* winepage*/
+    
+#health{
+    width: 100%;
+    height: 400px;
+    background-color: powderblue;
+    margin-top: -20px;
+    #healthHolder{
+        height: 400px;
+        background-color: hotpink;
+        #bloc{
+            width:100%;
+            height:400px;
+            border: 1 solid #eee;
+            padding: 0px 0px 0px 0px;
+            #blocHolder{
+                width:90%;
+                height: 400px;
+                margin: 0 auto;
+//                background-color: yellow;    
+            }  
+        }
+        #carlgut{
+            width:30%;
+            height: 400px;
+            float:left;
+            border: 1 solid #eee;
+            background-color: $base-color;
+            #justHolder{
+                width:100%;
+                height: 400px;
+                margin: 0 auto;
+                background-color: $base-color;
+                padding: 69px 13px 0px 20px;
+            }  
+        }
+        #logosMain{
+            width:70%;
+            height: 400px;
+            float:right;
+            border: 1 solid #eee;
+            background-color: $base-color;
+            padding: 50px 0px 0px 0px;
+            clear: none;
+            #logA, #logB, #logC{
+                position: relative;
+                left: 60px;
+                top: 113px;
+                width:40%;
+                height:150px;
+                margin: 0px 0px 0px 30px;
+                background-color: $base-color;
+                padding: 10px 0px 0px 0px;
+                display: inline;
+                img{
+                    width:21%;
+                    margin: 0 auto;
+                    
+                }
+            }
+        }
+        
+    }
+} 
+
+#justHolder h2{
+    font-family: $pacifico;
+    font-weight: 200;
+    font-size: .9em;
+    letter-spacing: 3px;
+    line-height: 44px;
+    text-align: center;
+    color:$white;  
+    margin: 0 auto;
+    
+}
+
+#justHolder p{
+    font-family: $source-sans;
+    font-weight: 300;
+    font-size: 1.2em;
+    text-align: center;
+    color:$white;  
+    margin: 0 auto;
+}    
+      
+    
+/*
+*
+* Wine page 
+*
+************************/
 #grape{
     width: 100%;
     height: 547px;
@@ -1276,12 +1600,20 @@ textarea:focus {
             width: 50%;
             height: 550px;
             float:left;
+            background-image: url("../img/wineopening.jpg");
+            background-attachment: scroll;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
         }
         #graText{
             width: 50%;
             height: 550px;
             float:right;
-            background-color: $grey;
+            background-color: $hover-grey;
             margin: 0px 0px 0px 0px;
             padding: 165px 15px 0px 15px;
             #gratHolder{
@@ -1290,9 +1622,9 @@ textarea:focus {
         }
     }
 }
-#gratHolder h1, #gratHolder h2, #gratHolder p {
+#gratHolder h1, #gratHolder p {
     font-family: $source-sans;
-    font-weight: 200;
+    font-weight: 600;
     font-size: 2em;
     letter-spacing: 3px;
     line-height: 34px;
@@ -1301,12 +1633,10 @@ textarea:focus {
     margin: 0 auto;
     padding: 0px 0px 10px 0px;
 } 
- #gratHolder h2{
-    font-family: $pacifico;
-    font-size: 1.2em;
-}
+
 #gratHolder p {
     font-size: .9em;
+    font-weight: 200;
     letter-spacing: 3px;
     line-height: 20px;
 }    
@@ -1349,7 +1679,7 @@ textarea:focus {
 }    
 #cartextHolder h1, #cartextHolder h2, #cartextHolder p {
     font-family: $source-sans;
-    font-weight: 200;
+    font-weight: 600;
     font-size: 2em;
     letter-spacing: 3px;
     line-height: 34px;
@@ -1364,6 +1694,7 @@ textarea:focus {
 }
 #cartextHolder p {
     font-size: .9em;
+    font-weight: 200;
     letter-spacing: 3px;
     line-height: 20px;
 }     
@@ -1371,6 +1702,26 @@ textarea:focus {
  
     
     
+}//end of media 
+
+
+
+@media screen and (min-width: $screen-small){
+
+    
+/*
+*
+* Home page 
+*
+************************/
+//welcome
+
+
+
+
+
+
+
 }//end of media 
 
 

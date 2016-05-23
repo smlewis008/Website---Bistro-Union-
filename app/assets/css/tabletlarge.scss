@@ -1,0 +1,281 @@
+$tablet-large: 768px;
+
+//bizcolors
+$base-color: #373752;
+$accent-color: #E2785D;
+ 
+//colors
+$white: #fff;
+$black: #000;
+$grey: #eee;
+//gradent
+
+//fonts
+$pacifico: 'Pacifico', cursive;   
+$source-sans: 'Source Sans Pro', sans-serif;
+
+@media screen and (min-width: $tablet-large){
+#wrapper{
+    height: 2314px;
+}   
+.header li {
+    float: left;
+}
+.header li a {
+    padding: 20px 30px;
+}
+.header .navigation {
+    clear: none;
+    float: right;
+    max-height: none;
+}
+.header .menu-icon {
+    display: none;
+}
+//restMenu    
+#restMenu{
+    height: 650px;
+    margin-top: 0px;
+    #restHolder{
+        height: 650px;
+        margin-top: 0px;
+        padding: 55px 0px 0px 25px;
+    }
+}
+#foodMenu{
+    float:left;
+    width:45%;
+    height: 526px;
+//    -webkit-animation: fmenumove 3s; 
+//    animation:  fmenumove 3s;
+}
+    
+#foodBig{
+    float:left;
+    width:25%;
+    height: auto;
+    margin: 40px 5px 0px 10px;
+//    -webkit-animation: fbmove 4s; 
+//    animation:  fbmove 4s;
+    
+}
+#foodSmall{
+    float:left;
+    width:25%;
+    height: auto;
+    margin: 120px 5px 0px 4px;
+//    -webkit-animation: fadeIn 7s; 
+//    animation:  fadeIn 7s;
+}
+    
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay:1.2s;
+  animation-delay: 1.2s;
+}
+
+.fade-in.three {
+  -webkit-animation-delay: 1.6s;
+  -moz-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}    
+
+//restMenu
+#reservation{
+    height: 640px;
+    #reservHolder{
+        height:540px;
+        position: relative;
+        margin: 0 auto;
+//        background-color: aqua;
+    }
+}
+#reservTile{
+    width: 50%;
+    height: 640px;
+    margin-top: 0px;
+    background-image: url("../img/chinasoup.jpg");
+    background-attachment: scroll;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+    position: absolute;
+    background-repeat: repeat-x;
+
+}
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}    
+#form{
+    width: 50%;
+    height: 660px;
+    margin-top: 0px;
+    float:right;
+    background-color:$base-color;  
+}
+#connect{
+    height: 405px;
+    margin-top: 0px;
+}
+#connectHolder{
+    height: 526px;
+    margin-top: 0px;
+}
+#consocial, #conTalk, #conEvent{
+    float:left;
+    width:30%;
+    height: 282px;
+    margin: 0px 7px;
+}
+#conWrap, #socialWrap{
+    padding: 0px 0px 10px 0px;   
+}
+#conTalk #blocksText {
+    position: relative;
+    top: 215px;
+}
+#wrapBottom {
+    height: 61px;
+}    
+#wrapbLeft,#wrapbRight {
+    height: 70px;
+    padding: 2em 0em 0em 1.2em;
+}    
+    
+/*
+*
+* Wine page 
+*
+************************/
+#grape{
+    width: 100%;
+    height: 547px;
+    margin-top: 0px;
+    #grapeHolder{
+        width: 100%;
+        height: 547px;
+        #graPic{
+            width: 50%;
+            height: 550px;
+            float:left;
+        }
+        #graText{
+            width: 50%;
+            height: 550px;
+            float:right;
+            background-color: $grey;
+            margin: 0px 0px 0px 0px;
+            padding: 165px 15px 0px 15px;
+            #gratHolder{
+                height: auto;
+            }
+        }
+    }
+}
+#gratHolder h1, #gratHolder h2, #gratHolder p {
+    font-family: $source-sans;
+    font-weight: 200;
+    font-size: 2em;
+    letter-spacing: 3px;
+    line-height: 34px;
+    text-align: center;
+    color:$black;  
+    margin: 0 auto;
+    padding: 0px 0px 10px 0px;
+} 
+ #gratHolder h2{
+    font-family: $pacifico;
+    font-size: 1.2em;
+}
+#gratHolder p {
+    font-size: .9em;
+    letter-spacing: 3px;
+    line-height: 20px;
+}    
+    
+#car{
+    width: 100%;
+    height: 523px;
+    margin-top: 0px;
+    #carHolder{
+        width: 100%;
+        height: 523px;
+        background-color: $white;
+        #carText{
+            width: 50%;
+            height: 520px;
+            background-color: $white;
+            margin: 0px 0px 0px 0px;
+            padding: 165px 15px 0px 15px;
+            float: left;
+            #cartextHolder{
+                height: auto;
+            }  
+        }
+        #carsol{
+           #carimageHolder{
+            width: 50%;
+            height: 520px;
+            float: right;
+            background-image: url("../img/winetop.jpeg");
+            background-attachment: scroll;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover; 
+            } 
+        }
+    }
+}    
+#cartextHolder h1, #cartextHolder h2, #cartextHolder p {
+    font-family: $source-sans;
+    font-weight: 200;
+    font-size: 2em;
+    letter-spacing: 3px;
+    line-height: 34px;
+    text-align: center;
+    color:$black;  
+    margin: 0 auto;
+    padding: 0px 0px 10px 0px;
+} 
+ #cartextHolder h2{
+    font-family: $pacifico;
+    font-size: 1.2em;
+}
+#cartextHolder p {
+    font-size: .9em;
+    letter-spacing: 3px;
+    line-height: 20px;
+}     
+    
+ 
+    
+    
+}//end of media 

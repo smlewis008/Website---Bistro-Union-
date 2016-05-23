@@ -10,42 +10,20 @@
         <section id="gift">
             <div id="giftHolder">
                 <div id="giftInfo">
-                    <form name="userForm" ng-submit="submitForm(userForm.$valid)"  class="giftForm"> <!-- form -->
+                    <form name="userForm" class="giftForm"> <!-- form -->
                         
                     <!-- FIRSTNAME -->
                     <div class="blocks">
-                        <input type="text" name="name" placeholder="name" class="userIns" ng-model="sender.firstname" >
+                        <input type="text" name="name" placeholder="your name" class="userIns" ng-model="sender.firstname" />
                         
                     </div>
                         
-                        
-<!--
-                        <div ng-show="bool" class="fade">
-  Show and hide me
-</div>
-<button ng-click="bool=!bool">Toggle</button>
-                        <div ng-app="myApp" ng-controller="personCtrl">
-                            <div ng-class="{on:onOff}" class="highlight">
-  Highlight this box
-</div>
-<button ng-click="onOff=!onOff">Toggle</button>
-                            <button ng-click="toggle()" class="fat">Show user</button>
-
-                            <p class="fat" ng-show="myVar">
-                            Email <input type=text ng-model="firstName"><br>
-                            </p>
-
-                            </div>
--->
-                      
                     <div class="blocks">
-                        <input type="checked" name="name" placeholder="name" class="userIns">
-                        <h1 ng-hide="checked">Want to be notified when the person has received your gift?</h1>
-                        <button type="text" class="btnNotify" ng-click="toggle()">Notify</button>
+                        <h1 class="checked">Send a gift card to your family or friend today!</h1>
                     </div>    
                     <!-- EMAIL -->
                     <div class="blocks" ng-show="">
-                        <input type="email" name="email" placeholder="Email" class="userIns" ng-model="sender.email">
+                        <input type="email" name="email" placeholder="Email" class="userIns" ng-model="sender.email"/>
                     </div>
                         
                     <!-- GIFTTO -->    
@@ -53,30 +31,33 @@
                     <!-- GIFTTO -->     
                     <!-- FIRSTNAME -->
                     <div class="blocks">
-                        <input type="text" name="name" placeholder="Name" class="userIns" ng-model="recv.firstname" >
+                        <input type="text" name="name" placeholder="Person's Name" class="userIns" ng-model="recv.firstname" />
                     </div>
 
-                    <!-- EMAIL -->
+                    <!-- GIFT -->
                     <div class="blocks">
-                        <input type="email" name="email" placeholder="Email" class="userIns" ng-model="recv.email">
+                        <select id="pick">
+                          <option value="select">Select Gift</option>
+                          <option value="Breackfast">Breakfast Gift Card</option>
+                          <option value="Dinner ">Dinner Gift Card</option>
+                          <option value="Lunch">Lunch Gift Card</option>
+                        </select>
                     </div>
                         
                     <!-- ADDRESS -->
                     <div class="blocks">
-                        <input type="text" name="address"  placeholder="address" class="userIns" ng-model="recv.address">
+                        <input type="text" name="address"  placeholder="address" class="userIns" ng-model="recv.address" />
                     </div>
                     <div class="blocks">
-                        <input type="text" name="city"  placeholder="city" class="userIns" ng-model="recv.city">
+                        <input type="text" name="city"  placeholder="city" class="userIns" ng-model="recv.city" />
                     </div>
                     <div class="blocks">
-                        <input type="text" name="address"  placeholder="address" class="userIns" ng-model="recv.state">
+                        <input type="text" name="address"  placeholder="state" class="userIns" ng-model="recv.state"/>
                     </div>
                     <div class="blocks">
-                        <input type="text" name="zip"  placeholder="zip" class="userIns" ng-model="recv.zip">
+                        <input type="text" name="zip"  placeholder="zip" class="userIns" ng-model="recv.zip" />
                     </div>
-                    <!-- OPTIONS -->    
-                    <!-- OPTIONS -->  
-                    <!-- OPTIONS -->
+                    
                     <!-- SUBMIT BUTTON -->    
                      <div class="form-group">
                         <button type="text" class="btnSend">Send Gift</button>

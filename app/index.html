@@ -7,29 +7,19 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <!-- <link rel="icon" href="../../favicon.ico"> -->
-    <title>Jumbotron Template for Bootstrap</title>
+    <title>Bistro Union</title>
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<!--    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">-->
-<!--    <script src="assets/js/ie-emulation-modes-warning.js"></script>-->
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-    <!-- Latest compiled and minified JavaScript -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
-    <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro:400,200,200italic,300,300italic,600' rel='stylesheet' type='text/css'>  
-<!--    @import url(https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro:400,200,200italic,300,300italic,600);-->
-    
-  </head>
+</head>
 
-  <body>
+<body>
     
 <header class="header">
+
   <a href="/" class="logo">Bistro</a>
   <input class="menu-btn" type="checkbox" id="menu-btn" />
   <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
@@ -39,72 +29,34 @@
     <li><a href="#/wine">Wine</a></li>
     <li><a href="#/gift">Gifts</a></li>
   </ul> 
-</header>    
-<div id="wrapper">
-    <ng-view></ng-view>
-</div>     
-<!--
- <main class="main">
-  <div class="section">
-    <a href="#">
-      <span>Moving into a new place</span>
-      <img src="http://opoty.co.uk/images/dsc_3810_1446485037.jpg" alt="" />
-    </a>
-  </div>
-  <div class="section section-split">
-    <a href="#">
-      <span>Music kickstarters</span>
-      <img src="http://opoty.co.uk/images/williameades-14_1446458732.jpg" alt="" />
-    </a>
-    <a href="#">
-      <span>Tag your sound</span>
-      <img src="http://opoty.co.uk/images/pakistan2015_0012_10b_1446446507.jpg" alt="" />
-    </a>
-  </div>
-  <div class="section section-split">
-    <a href="#">
-      <span>Motels fighting back</span>
-      <img src="http://opoty.co.uk/images/george_karbus%281of6%29_1446491341.jpg" alt="" />
-    </a>
-    <a href="#">
-      <span>Future car design</span>
-      <img src="http://opoty.co.uk/images/risingsun_1445449099.jpg" alt="" />
-    </a>
-  </div>
-  <div class="section section-split">
-    <a href="#">
-      <span>Following the game</span>
-      <img src="http://opoty.co.uk/images/greg_whitton_photography_opoty_2015_lo-20_1446486089.jpg" alt="" />
-    </a>
-    <a href="#">
-      <span>I'm bored</span>
-      <img src="http://opoty.co.uk/images/1k4a1561_elephants_trunk_1445347584.jpg" alt="" />
-    </a>
-  </div>
-</main>    
--->
-      
-      
+  
+</header> 
 
-    <!-- Bootstrap core JavaScript
+<div id="wrapper">
+
+    <ng-view></ng-view>
+
+</div>     
+
+<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    // <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!--    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>-->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+    $(".navigation").find("li").on("click", "a", function () {
+    $('.header.in').collapse('hide');
+    });
+});
+    </script>    
     <!-- Angular -->
     <script src="assets/angular.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
-    <script type="text/javascript" src="assets/angular-resource.js"></script>
-   <!-- <script src="assets/js/angular-animate.js"></script> -->
-    <script src="assets/angular-route.min.js"></script>
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-touch.js"></script>-->
+    <script src="assets/angular-resource.js"></script>
+    <script src="assets/angular-route.js"></script>
     <script src="assets/angular-touch.js"></script>  
     <script src="app.module.js"></script>
     <script src="assets/js/app.js"></script>
-     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<!--    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>-->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
